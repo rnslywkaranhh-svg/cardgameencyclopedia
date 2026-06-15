@@ -1,11 +1,14 @@
 export type Difficulty = "Easy" | "Medium" | "Hard";
 
+export type Edition = "original" | "canadian" | "future";
+
 export type Game = {
   id: string;
   name: string;
   category: string;
   players: string;
   difficulty: Difficulty;
+  edition: Edition;
   description: string;
   objective: string;
   deck: string;
@@ -20,6 +23,7 @@ export const GAMES: Game[] = [
     category: "Betting",
     players: "2-10",
     difficulty: "Medium",
+    edition: "original",
     description:
       "A family of card games combining skill, strategy and gambling.",
     objective:
@@ -44,6 +48,7 @@ export const GAMES: Game[] = [
     category: "Betting",
     players: "2-7",
     difficulty: "Easy",
+    edition: "original",
     description: "A classic casino card game also known as 21.",
     objective: "Beat the dealer by getting closer to 21 without going over.",
     deck: "Standard 52-card deck (often multiple decks)",
@@ -67,6 +72,7 @@ export const GAMES: Game[] = [
     category: "Betting",
     players: "2-14",
     difficulty: "Easy",
+    edition: "original",
     description:
       "A comparing card game played between two hands: the Player and the Banker.",
     objective:
@@ -92,6 +98,7 @@ export const GAMES: Game[] = [
     category: "Betting",
     players: "2-7",
     difficulty: "Easy",
+    edition: "original",
     description:
       "A casino poker variant where players compete against the dealer with only three cards.",
     objective: "Have a better three-card hand than the dealer.",
@@ -116,6 +123,7 @@ export const GAMES: Game[] = [
     category: "Betting",
     players: "2-8",
     difficulty: "Easy",
+    edition: "original",
     description: "A simple casino version of the classic War card game.",
     objective: "Have a higher card than the dealer.",
     deck: "Standard 52-card deck (often 6 decks)",
@@ -139,6 +147,7 @@ export const GAMES: Game[] = [
     category: "Trick-taking",
     players: "4",
     difficulty: "Hard",
+    edition: "original",
     description:
       "One of the most celebrated card games in the world, played in fixed partnerships.",
     objective:
@@ -164,6 +173,7 @@ export const GAMES: Game[] = [
     category: "Trick-taking",
     players: "4",
     difficulty: "Medium",
+    edition: "original",
     description:
       "A trick-taking game where the goal is to avoid taking penalty cards.",
     objective: "Have the lowest score when any player reaches 100 points.",
@@ -188,6 +198,7 @@ export const GAMES: Game[] = [
     category: "Trick-taking",
     players: "4",
     difficulty: "Medium",
+    edition: "original",
     description:
       "A partnership trick-taking game where Spades are always trump.",
     objective:
@@ -213,6 +224,7 @@ export const GAMES: Game[] = [
     category: "Trick-taking",
     players: "4",
     difficulty: "Medium",
+    edition: "original",
     description:
       "A fast-paced partnership trick-taking game popular in North America.",
     objective: "Be the first team to score 10 points by winning tricks.",
@@ -237,6 +249,7 @@ export const GAMES: Game[] = [
     category: "Trick-taking",
     players: "4",
     difficulty: "Medium",
+    edition: "original",
     description: "The classic English trick-taking game that preceded Bridge.",
     objective: "Win more tricks than your opponents over several hands.",
     deck: "Standard 52-card deck",
@@ -260,6 +273,7 @@ export const GAMES: Game[] = [
     category: "Trick-taking",
     players: "2-4",
     difficulty: "Hard",
+    edition: "original",
     description:
       "A trick-taking game using a special 48-card deck with unique scoring combinations.",
     objective: "Score points through melds and tricks.",
@@ -284,6 +298,7 @@ export const GAMES: Game[] = [
     category: "Trick-taking",
     players: "3-7",
     difficulty: "Medium",
+    edition: "original",
     description:
       "A trick-taking game where you must win exactly the number of tricks you bid.",
     objective:
@@ -309,6 +324,7 @@ export const GAMES: Game[] = [
     category: "Matching",
     players: "2-6",
     difficulty: "Easy",
+    edition: "original",
     description:
       "The foundational matching card game of forming sets and runs.",
     objective: "Be the first to form your entire hand into valid sets or runs.",
@@ -333,6 +349,7 @@ export const GAMES: Game[] = [
     category: "Matching",
     players: "2",
     difficulty: "Easy",
+    edition: "original",
     description: "A two-player rummy variant with a strategic knocking system.",
     objective:
       "Reduce your unmatched card points to zero or knock before your opponent.",
@@ -357,6 +374,7 @@ export const GAMES: Game[] = [
     category: "Matching",
     players: "2-6",
     difficulty: "Hard",
+    edition: "original",
     description:
       "A rummy-style game famous for complex scoring and wild cards.",
     objective:
@@ -382,6 +400,7 @@ export const GAMES: Game[] = [
     category: "Matching",
     players: "2-6",
     difficulty: "Easy",
+    edition: "original",
     description: "A beloved children's card game of collecting sets of four.",
     objective: "Collect the most sets of four cards of the same rank.",
     deck: "Standard 52-card deck",
@@ -405,6 +424,7 @@ export const GAMES: Game[] = [
     category: "Matching",
     players: "2-8",
     difficulty: "Easy",
+    edition: "original",
     description:
       "A shedding game where 8s are wild and you must match suit or rank.",
     objective: "Be the first player to get rid of all your cards.",
@@ -429,6 +449,7 @@ export const GAMES: Game[] = [
     category: "Shedding",
     players: "2-10",
     difficulty: "Easy",
+    edition: "original",
     description:
       "The world's most popular shedding card game with colorful action cards.",
     objective: "Be the first player to empty your hand.",
@@ -453,6 +474,7 @@ export const GAMES: Game[] = [
     category: "Shedding",
     players: "4-8",
     difficulty: "Medium",
+    edition: "original",
     description:
       "A shedding game with a social hierarchy — also known as Scum.",
     objective: "Be the first to empty your hand and become President.",
@@ -477,6 +499,7 @@ export const GAMES: Game[] = [
     category: "Shedding",
     players: "2-6",
     difficulty: "Medium",
+    edition: "original",
     description: "A shedding game with three layers of cards.",
     objective: "Be the first player to get rid of all three layers of cards.",
     deck: "Standard 52-card deck",
@@ -500,6 +523,7 @@ export const GAMES: Game[] = [
     category: "Shedding",
     players: "3-8",
     difficulty: "Easy",
+    edition: "original",
     description: "A bluffing shedding game also known as I Doubt It or BS.",
     objective:
       "Be the first to get rid of all your cards by playing honestly or bluffing.",
@@ -524,6 +548,7 @@ export const GAMES: Game[] = [
     category: "Luck",
     players: "2",
     difficulty: "Easy",
+    edition: "original",
     description: "The simplest card game — pure luck, no decisions required.",
     objective: "Collect all 52 cards by winning battles.",
     deck: "Standard 52-card deck",
@@ -547,6 +572,7 @@ export const GAMES: Game[] = [
     category: "Luck",
     players: "2-8",
     difficulty: "Easy",
+    edition: "original",
     description: "A fast-reaction card game where speed is everything.",
     objective: "Collect all cards by being the first to slap matching pairs.",
     deck: "Standard 52-card deck",
@@ -570,6 +596,7 @@ export const GAMES: Game[] = [
     category: "Counting",
     players: "2-4",
     difficulty: "Medium",
+    edition: "original",
     description:
       "A classic counting game using a distinctive peg board to track scores.",
     objective: "Be the first player to peg 121 points.",
@@ -594,6 +621,7 @@ export const GAMES: Game[] = [
     category: "Counting",
     players: "2-9",
     difficulty: "Easy",
+    edition: "original",
     description:
       "A simple counting game where players aim for a hand totaling 31.",
     objective: "Have the highest hand value in a single suit.",
@@ -618,6 +646,7 @@ export const GAMES: Game[] = [
     category: "Solo",
     players: "1",
     difficulty: "Easy",
+    edition: "original",
     description: "The classic single-player card game, also known as Klondike.",
     objective:
       "Move all cards to the four foundation piles, sorted by suit from Ace to King.",
@@ -642,6 +671,7 @@ export const GAMES: Game[] = [
     category: "Solo",
     players: "1",
     difficulty: "Medium",
+    edition: "original",
     description:
       "A solitaire variant where all cards are visible from the start.",
     objective: "Move all cards to the four foundation piles sorted by suit.",
@@ -666,6 +696,7 @@ export const GAMES: Game[] = [
     category: "Solo",
     players: "1",
     difficulty: "Hard",
+    edition: "original",
     description: "A challenging solitaire game played with two full decks.",
     objective:
       "Build 8 complete suit sequences from King to Ace and remove them.",
@@ -690,6 +721,7 @@ export const GAMES: Game[] = [
     category: "Solo",
     players: "1",
     difficulty: "Medium",
+    edition: "original",
     description:
       "A solitaire game where pairs of cards totaling 13 are removed.",
     objective:
@@ -715,6 +747,7 @@ export const GAMES: Game[] = [
     category: "Kids",
     players: "2-8",
     difficulty: "Easy",
+    edition: "original",
     description:
       "A classic children's matching game — don't be left with the Old Maid!",
     objective:
@@ -740,6 +773,7 @@ export const GAMES: Game[] = [
     category: "Kids",
     players: "2-6",
     difficulty: "Easy",
+    edition: "original",
     description:
       "A concentration game testing players' ability to remember card locations.",
     objective: "Collect the most matching pairs.",
@@ -764,6 +798,7 @@ export const GAMES: Game[] = [
     category: "Luck",
     players: "2-8",
     difficulty: "Easy",
+    edition: "original",
     description: "A reaction game where players race to slap Jacks.",
     objective: "Win all the cards by slapping Jacks as they appear.",
     deck: "Standard 52-card deck",
@@ -787,6 +822,7 @@ export const GAMES: Game[] = [
     category: "Fishing",
     players: "2-4",
     difficulty: "Medium",
+    edition: "original",
     description:
       "A traditional fishing card game with complex capturing rules.",
     objective: "Score points by capturing cards from the table.",
@@ -811,6 +847,7 @@ export const GAMES: Game[] = [
     category: "Fishing",
     players: "2-6",
     difficulty: "Medium",
+    edition: "original",
     description: "The national card game of Italy.",
     objective:
       "Score the most points by capturing cards and clearing the table.",
@@ -835,6 +872,7 @@ export const GAMES: Game[] = [
     category: "Shedding",
     players: "3-7",
     difficulty: "Easy",
+    edition: "original",
     description:
       "A simple card game where players build sequences outward from the 7s.",
     objective: "Be the first player to get rid of all your cards.",
@@ -859,6 +897,7 @@ export const GAMES: Game[] = [
     category: "Bluffing",
     players: "2-6",
     difficulty: "Medium",
+    edition: "original",
     description:
       "A social deduction game of hidden roles and ruthless bluffing.",
     objective: "Be the last player with influence cards remaining.",
@@ -883,6 +922,7 @@ export const GAMES: Game[] = [
     category: "Solo",
     players: "1",
     difficulty: "Easy",
+    edition: "original",
     description:
       "A solitaire variant very similar to classic Solitaire with slightly different rules.",
     objective:
@@ -908,6 +948,7 @@ export const GAMES: Game[] = [
     category: "Solo",
     players: "1",
     difficulty: "Hard",
+    edition: "original",
     description:
       "A solitaire variant where face-up cards can be moved in groups regardless of sequence.",
     objective: "Move all cards to four foundation piles by suit.",
@@ -932,6 +973,7 @@ export const GAMES: Game[] = [
     category: "Solo",
     players: "1",
     difficulty: "Hard",
+    edition: "original",
     description: "A fast solitaire game named after a famous casino operator.",
     objective: "Move all cards to the four foundation piles.",
     deck: "Standard 52-card deck",
@@ -955,6 +997,7 @@ export const GAMES: Game[] = [
     category: "Solo",
     players: "1",
     difficulty: "Medium",
+    edition: "original",
     description:
       "A solitaire game where the layout compresses like an accordion.",
     objective: "Compress all 52 cards into a single pile.",
@@ -979,6 +1022,7 @@ export const GAMES: Game[] = [
     category: "Matching",
     players: "2-4",
     difficulty: "Medium",
+    edition: "original",
     description: "A competitive patience game also known as Cat and Mouse.",
     objective:
       "Be the first to play all cards from your pay-off pile to the center stacks.",
@@ -1003,6 +1047,7 @@ export const GAMES: Game[] = [
     category: "Matching",
     players: "2-6",
     difficulty: "Medium",
+    edition: "original",
     description:
       "A rummy-style game where players complete 10 specific phases in order.",
     objective: "Complete all 10 phases before your opponents.",
@@ -1027,6 +1072,7 @@ export const GAMES: Game[] = [
     category: "Luck",
     players: "2-4",
     difficulty: "Easy",
+    edition: "original",
     description:
       "A classic children's card game of pure chance also known as Strip Jack Naked.",
     objective: "Win all the cards.",
@@ -1051,6 +1097,7 @@ export const GAMES: Game[] = [
     category: "Kids",
     players: "3-13",
     difficulty: "Easy",
+    edition: "original",
     description:
       "A fast and silly card game where players pass cards and grab spoons.",
     objective: "Collect four of a kind and grab a spoon before others notice.",
@@ -1075,6 +1122,7 @@ export const GAMES: Game[] = [
     category: "Kids",
     players: "3-8",
     difficulty: "Easy",
+    edition: "original",
     description:
       "A matching card game where the loser earns letters spelling DONKEY.",
     objective: "Avoid spelling DONKEY by not being left without a match.",
@@ -1099,6 +1147,7 @@ export const GAMES: Game[] = [
     category: "Luck",
     players: "3-8",
     difficulty: "Easy",
+    edition: "original",
     description:
       "A simple passing game where players try to avoid holding the lowest card.",
     objective: "Avoid holding the lowest card at the end of each round.",
@@ -1123,6 +1172,7 @@ export const GAMES: Game[] = [
     category: "Betting",
     players: "2-8",
     difficulty: "Easy",
+    edition: "original",
     description:
       "The British version of Blackjack with some key rule differences.",
     objective: "Beat the banker by getting closest to 21 without going over.",
@@ -1147,6 +1197,7 @@ export const GAMES: Game[] = [
     category: "Betting",
     players: "2-8",
     difficulty: "Easy",
+    edition: "original",
     description:
       "A simple betting game also known as Acey Deucey or In-Between.",
     objective:
@@ -1172,6 +1223,7 @@ export const GAMES: Game[] = [
     category: "Trick-taking",
     players: "3",
     difficulty: "Hard",
+    edition: "original",
     description:
       "The national card game of Germany, considered one of the best three-player card games.",
     objective:
@@ -1197,6 +1249,7 @@ export const GAMES: Game[] = [
     category: "Trick-taking",
     players: "3-5",
     difficulty: "Hard",
+    edition: "original",
     description:
       "A trick-taking game descended from Skat, popular in the American Midwest.",
     objective: "Win enough card points to fulfill your team's bid.",
@@ -1221,6 +1274,7 @@ export const GAMES: Game[] = [
     category: "Trick-taking",
     players: "2-5",
     difficulty: "Medium",
+    edition: "original",
     description:
       "One of Italy's most popular card games with unique card values.",
     objective:
@@ -1246,6 +1300,7 @@ export const GAMES: Game[] = [
     category: "Trick-taking",
     players: "2-4",
     difficulty: "Hard",
+    edition: "original",
     description:
       "A classic Italian trick-taking game with a unique no-trump rule.",
     objective:
@@ -1271,6 +1326,7 @@ export const GAMES: Game[] = [
     category: "Matching",
     players: "2",
     difficulty: "Hard",
+    edition: "original",
     description:
       "A 19th century two-player card game combining trick-taking and melding.",
     objective: "Score 1,000 points first through melds and tricks.",
@@ -1295,6 +1351,7 @@ export const GAMES: Game[] = [
     category: "Trick-taking",
     players: "2",
     difficulty: "Hard",
+    edition: "original",
     description:
       "A classic two-player card game with a rich history dating to 16th century France.",
     objective:
@@ -1320,6 +1377,7 @@ export const GAMES: Game[] = [
     category: "Counting",
     players: "2",
     difficulty: "Medium",
+    edition: "original",
     description:
       "The original two-player version of Cribbage using only 5 cards.",
     objective: "Be the first player to peg 61 points.",
@@ -1344,6 +1402,7 @@ export const GAMES: Game[] = [
     category: "Counting",
     players: "3-5",
     difficulty: "Medium",
+    edition: "original",
     description:
       "A fun counting game where the running total must never exceed 99.",
     objective: "Avoid being the player who pushes the count over 99.",
@@ -1368,6 +1427,7 @@ export const GAMES: Game[] = [
     category: "Trick-taking",
     players: "3-7",
     difficulty: "Medium",
+    edition: "original",
     description:
       "A trick-taking game also known as Wizard where exact bidding is everything.",
     objective:
@@ -1393,6 +1453,7 @@ export const GAMES: Game[] = [
     category: "Trick-taking",
     players: "2-8",
     difficulty: "Medium",
+    edition: "original",
     description:
       "A pirate-themed trick-taking game with special character cards.",
     objective:
@@ -1418,6 +1479,7 @@ export const GAMES: Game[] = [
     category: "Shedding",
     players: "4",
     difficulty: "Hard",
+    edition: "original",
     description:
       "A partnership climbing game combining elements of President, Poker, and Bridge.",
     objective: "First partnership to reach 1,000 points.",
@@ -1442,6 +1504,7 @@ export const GAMES: Game[] = [
     category: "Shedding",
     players: "4",
     difficulty: "Medium",
+    edition: "original",
     description: "A shedding game popular across East and Southeast Asia.",
     objective: "Be the first player to get rid of all your cards.",
     deck: "Standard 52-card deck",
@@ -1465,6 +1528,7 @@ export const GAMES: Game[] = [
     category: "Luck",
     players: "2-8",
     difficulty: "Easy",
+    edition: "original",
     description:
       "A fast card game also known as Cabo where players try to minimize their hand value.",
     objective: "Have the lowest total card value when someone calls Cabo.",
@@ -1489,6 +1553,7 @@ export const GAMES: Game[] = [
     category: "Matching",
     players: "2-8",
     difficulty: "Easy",
+    edition: "original",
     description: "A lightning-fast symbol-matching game also known as Spot It.",
     objective:
       "Collect or shed cards by spotting the matching symbol between two cards.",
@@ -1513,6 +1578,7 @@ export const GAMES: Game[] = [
     category: "Shedding",
     players: "2-6",
     difficulty: "Medium",
+    edition: "original",
     description:
       "Russia's most popular card game — the loser is the Durak (fool).",
     objective:
@@ -1538,6 +1604,7 @@ export const GAMES: Game[] = [
     category: "Shedding",
     players: "2-6",
     difficulty: "Easy",
+    edition: "original",
     description:
       "A popular German shedding game closely related to Crazy Eights and Uno.",
     objective: "Be the first player to get rid of all your cards.",
@@ -1562,6 +1629,7 @@ export const GAMES: Game[] = [
     category: "Shedding",
     players: "2-8",
     difficulty: "Medium",
+    edition: "original",
     description:
       "A fast simultaneous solitaire game also known as Pounce or Racing Demon.",
     objective:
@@ -1587,6 +1655,7 @@ export const GAMES: Game[] = [
     category: "Matching",
     players: "4-8",
     difficulty: "Easy",
+    edition: "original",
     description:
       "A team card game where partners communicate through secret signals.",
     objective:
@@ -1612,6 +1681,7 @@ export const GAMES: Game[] = [
     category: "Luck",
     players: "2-8",
     difficulty: "Easy",
+    edition: "original",
     description:
       "A fast slapping game with complex rules for when to slap the pile.",
     objective: "Win all the cards by slapping the pile at the right moments.",
@@ -1636,6 +1706,7 @@ export const GAMES: Game[] = [
     category: "Kids",
     players: "3-13",
     difficulty: "Easy",
+    edition: "original",
     description: "A fast card-grabbing game similar to Pig but with spoons.",
     objective:
       "Collect four of a kind and grab a spoon — or just grab a spoon before others.",
@@ -1660,6 +1731,7 @@ export const GAMES: Game[] = [
     category: "Shedding",
     players: "2",
     difficulty: "Medium",
+    edition: "original",
     description: "A fast simultaneous two-player shedding game.",
     objective: "Be the first player to get rid of all your cards.",
     deck: "Standard 52-card deck",
@@ -1683,6 +1755,7 @@ export const GAMES: Game[] = [
     category: "Solo",
     players: "2-4",
     difficulty: "Easy",
+    edition: "original",
     description: "A multi-player version of Golf where low scores win.",
     objective: "Score fewer points than your opponents over 9 rounds.",
     deck: "Standard 52-card deck",
@@ -1706,6 +1779,7 @@ export const GAMES: Game[] = [
     category: "Betting",
     players: "2-8",
     difficulty: "Easy",
+    edition: "original",
     description:
       "A simple German betting game popular in the 16th and 17th centuries.",
     objective:
@@ -1731,6 +1805,7 @@ export const GAMES: Game[] = [
     category: "Trick-taking",
     players: "2-4",
     difficulty: "Medium",
+    edition: "original",
     description: "A popular bluffing trick-taking game from South America.",
     objective:
       "Win 2 out of 3 tricks per hand while bluffing about your card strength.",
@@ -1755,6 +1830,7 @@ export const GAMES: Game[] = [
     category: "Fishing",
     players: "4",
     difficulty: "Hard",
+    edition: "original",
     description:
       "The partnership version of Scopa, considered one of Italy's greatest card games.",
     objective:
@@ -1780,6 +1856,7 @@ export const GAMES: Game[] = [
     category: "Fishing",
     players: "2-4",
     difficulty: "Medium",
+    edition: "original",
     description: "Ecuador's national card game, a unique fishing game.",
     objective: "Be the first team to score 40 points.",
     deck: "40-card Spanish deck",
@@ -1803,6 +1880,7 @@ export const GAMES: Game[] = [
     category: "Fishing",
     players: "2-4",
     difficulty: "Medium",
+    edition: "original",
     description: "A variant of Casino with additional building rules.",
     objective:
       "Score points by capturing cards, especially Aces and court cards.",
@@ -1827,6 +1905,7 @@ export const GAMES: Game[] = [
     category: "Matching",
     players: "2",
     difficulty: "Medium",
+    edition: "original",
     description: "One of the oldest Rummy-type games, originating in Mexico.",
     objective: "Be the first player to meld 11 cards.",
     deck: "40-card Spanish deck (or standard deck without 8s, 9s, 10s)",
@@ -1850,6 +1929,7 @@ export const GAMES: Game[] = [
     category: "Matching",
     players: "2-4",
     difficulty: "Easy",
+    edition: "original",
     description:
       "A fast rummy variant popular in jazz clubs and African American communities.",
     objective:
@@ -1875,6 +1955,7 @@ export const GAMES: Game[] = [
     category: "Matching",
     players: "2-8",
     difficulty: "Medium",
+    edition: "original",
     description:
       "A popular Rummy variant where players can pick up multiple discard pile cards.",
     objective: "Be the first player to reach 500 points.",
@@ -1899,6 +1980,7 @@ export const GAMES: Game[] = [
     category: "Matching",
     players: "2-8",
     difficulty: "Medium",
+    edition: "original",
     description:
       "A contract rummy game with 7 rounds of increasing complexity.",
     objective: "Score the fewest points across all 7 rounds.",
@@ -1923,6 +2005,7 @@ export const GAMES: Game[] = [
     category: "Trick-taking",
     players: "4",
     difficulty: "Medium",
+    edition: "original",
     description: "A Kenyan trick-taking game played widely across East Africa.",
     objective: "Win the most tricks for your partnership.",
     deck: "Standard 52-card deck",
@@ -1946,6 +2029,7 @@ export const GAMES: Game[] = [
     category: "Matching",
     players: "2-6",
     difficulty: "Medium",
+    edition: "original",
     description:
       "A popular variant of Rummy played widely in Jamaica and the Caribbean.",
     objective: "Be the first player to go out by melding all your cards.",
@@ -1970,6 +2054,7 @@ export const GAMES: Game[] = [
     category: "Matching",
     players: "2",
     difficulty: "Medium",
+    edition: "original",
     description:
       "An early American Rummy game considered a predecessor of modern Rummy.",
     objective: "Be the first player to meld 11 cards.",
@@ -1994,6 +2079,7 @@ export const GAMES: Game[] = [
     category: "Matching",
     players: "2-6",
     difficulty: "Hard",
+    edition: "original",
     description:
       "A complex Rummy variant also known as Panguingue, popular in the American Southwest.",
     objective: "Be the first to meld 11 cards and collect chips.",
@@ -2018,6 +2104,7 @@ export const GAMES: Game[] = [
     category: "Betting",
     players: "2-6",
     difficulty: "Easy",
+    edition: "original",
     description: "A simple Spanish betting game played with a special board.",
     objective: "Win the most chips by correctly betting on card combinations.",
     deck: "40-card Spanish deck",
@@ -2041,6 +2128,7 @@ export const GAMES: Game[] = [
     category: "Trick-taking",
     players: "3",
     difficulty: "Hard",
+    edition: "original",
     description:
       "A classic Spanish trick-taking game that influenced many European card games.",
     objective: "As Ombre (the bidder), win more tricks than either opponent.",
@@ -2065,6 +2153,7 @@ export const GAMES: Game[] = [
     category: "Trick-taking",
     players: "2-7",
     difficulty: "Medium",
+    edition: "original",
     description: "An American trick-taking game also known as Setback.",
     objective: "Be the first player to reach 11 points.",
     deck: "Standard 52-card deck",
@@ -2088,6 +2177,7 @@ export const GAMES: Game[] = [
     category: "Trick-taking",
     players: "2-6",
     difficulty: "Medium",
+    edition: "original",
     description:
       "A variant of Pitch where the 5 of trump (Pedro) scores 5 points.",
     objective: "Be the first player or team to reach 62 points.",
@@ -2112,6 +2202,7 @@ export const GAMES: Game[] = [
     category: "Trick-taking",
     players: "4",
     difficulty: "Medium",
+    edition: "original",
     description:
       "A partnership trick-taking game popular in the American West in the 19th century.",
     objective: "Be the first partnership to reach 51 points.",
@@ -2136,6 +2227,7 @@ export const GAMES: Game[] = [
     category: "Betting",
     players: "4",
     difficulty: "Hard",
+    edition: "original",
     description:
       "The most popular card game in the Basque Country, played in partnerships.",
     objective:
@@ -2161,6 +2253,7 @@ export const GAMES: Game[] = [
     category: "Trick-taking",
     players: "4",
     difficulty: "Medium",
+    edition: "original",
     description: "Portugal's national card game, played in partnerships.",
     objective: "Win more than 60 card points in tricks.",
     deck: "40-card Portuguese deck",
@@ -2184,6 +2277,7 @@ export const GAMES: Game[] = [
     category: "Trick-taking",
     players: "2-4",
     difficulty: "Easy",
+    edition: "original",
     description:
       "A simplified Portuguese trick-taking game similar to Briscola.",
     objective: "Score more than 60 card points.",
@@ -2208,6 +2302,7 @@ export const GAMES: Game[] = [
     category: "Counting",
     players: "3-6",
     difficulty: "Medium",
+    edition: "original",
     description:
       "A German counting card game where reaching exactly 31 in one suit wins instantly.",
     objective:
@@ -2233,6 +2328,7 @@ export const GAMES: Game[] = [
     category: "Counting",
     players: "3-8",
     difficulty: "Easy",
+    edition: "original",
     description:
       "The German version of Thirty-One, extremely popular in German-speaking countries.",
     objective: "Avoid having the lowest hand value and losing all three lives.",
@@ -2257,6 +2353,7 @@ export const GAMES: Game[] = [
     category: "Shedding",
     players: "2-6",
     difficulty: "Medium",
+    edition: "original",
     description: "A commercial version of Palace with a Karma twist.",
     objective: "Be the first player to get rid of all your cards.",
     deck: "Karma deck (or standard 52-card deck)",
@@ -2280,6 +2377,7 @@ export const GAMES: Game[] = [
     category: "Counting",
     players: "2-6",
     difficulty: "Easy",
+    edition: "original",
     description:
       "A popular Israeli card game combining elements of Rummy and Gin.",
     objective: "Have the lowest hand value when someone calls Yaniv.",
@@ -2304,6 +2402,7 @@ export const GAMES: Game[] = [
     category: "Fishing",
     players: "2-4",
     difficulty: "Medium",
+    edition: "original",
     description:
       "A popular fishing card game from the Middle East and North Africa.",
     objective:
@@ -2329,6 +2428,7 @@ export const GAMES: Game[] = [
     category: "Fishing",
     players: "2-4",
     difficulty: "Hard",
+    edition: "original",
     description:
       "A complex Indian fishing card game with intricate building rules.",
     objective: "Score 100 points first by capturing valuable cards.",
@@ -2353,6 +2453,7 @@ export const GAMES: Game[] = [
     category: "Matching",
     players: "2-3",
     difficulty: "Hard",
+    edition: "original",
     description:
       "A traditional Japanese card game played with beautiful flower cards.",
     objective:
@@ -2378,6 +2479,7 @@ export const GAMES: Game[] = [
     category: "Matching",
     players: "2",
     difficulty: "Hard",
+    edition: "original",
     description:
       "The most popular variant of Hanafuda, with a press-your-luck decision after each Yaku.",
     objective:
@@ -2403,6 +2505,7 @@ export const GAMES: Game[] = [
     category: "Trick-taking",
     players: "4",
     difficulty: "Hard",
+    edition: "canadian",
     description:
       "Saskatchewan\'s most beloved card game — a fast-paced partnership trick-taking game where the 5 of hearts is your friend and the 3 of spades is your enemy. Played widely across the prairie provinces with several regional variants.",
     objective:
@@ -2434,6 +2537,7 @@ export const GAMES: Game[] = [
     category: "Trick-taking",
     players: "4",
     difficulty: "Hard",
+    edition: "canadian",
     description:
       'The Québec variant of Kaiser, "Les Rois" (The Kings), where sevens rank highest and kings rank lowest — a fascinating regional inversion of the classic.',
     objective:
@@ -2465,6 +2569,7 @@ export const GAMES: Game[] = [
     category: "Trick-taking",
     players: "4",
     difficulty: "Hard",
+    edition: "canadian",
     description:
       "A beloved Canadian and Australian trick-taking game often called Canada's national card game. Combines the bidding of Bridge with the trick-play of Euchre.",
     objective:
@@ -2496,6 +2601,7 @@ export const GAMES: Game[] = [
     category: "Trick-taking",
     players: "3",
     difficulty: "Medium",
+    edition: "canadian",
     description:
       'Also known as "9-5-2", this Canadian trick-taking game has a strict contract: the dealer must take 9 tricks, second player 5, and third player 2. Sweet revenge if you fail.',
     objective:
@@ -2527,6 +2633,7 @@ export const GAMES: Game[] = [
     category: "Trick-taking",
     players: "2-6",
     difficulty: "Medium",
+    edition: "canadian",
     description:
       "A Maritime Canadian and Newfoundland classic. Trick-taking with a quirky card ranking — the 5 of trumps is the highest card, and the Jack of trumps comes second.",
     objective:
@@ -2557,6 +2664,7 @@ export const GAMES: Game[] = [
     category: "Trick-taking",
     players: "4",
     difficulty: "Medium",
+    edition: "canadian",
     description:
       "A partnership Whist variant with bidding for trump, popular in Canada and especially in Black Canadian communities. A faster, livelier cousin of Bridge.",
     objective:
@@ -2588,6 +2696,7 @@ export const GAMES: Game[] = [
     category: "Trick-taking",
     players: "4",
     difficulty: "Medium",
+    edition: "canadian",
     description:
       'Also called "Scotch Whist," brought to Canada by Scottish immigrants and still played in Maritime and Western communities. The 10 of trumps is the prize card.',
     objective:
@@ -2619,6 +2728,7 @@ export const GAMES: Game[] = [
     category: "Trick-taking",
     players: "2-10",
     difficulty: "Medium",
+    edition: "canadian",
     description:
       "A Cape Breton and Maritime Canadian variant of Auction 45's, often played at kitchen parties and Legion halls across Atlantic Canada.",
     objective:
@@ -2650,6 +2760,7 @@ export const GAMES: Game[] = [
     category: "Matching",
     players: "2-6",
     difficulty: "Medium",
+    edition: "canadian",
     description:
       'A beloved Canadian family game and Canasta variant played at kitchen tables, retirement homes, and church basements across the prairies and Maritimes. Each player gets TWO hands: a "hand" and a "foot."',
     objective:
@@ -2683,6 +2794,7 @@ export const GAMES: Game[] = [
     category: "Matching",
     players: "2-5",
     difficulty: "Easy",
+    edition: "canadian",
     description:
       'A fast, family-friendly Canadian Rummy variant where you "knock" on the table to end the round once your unmatched cards are low enough to beat your opponents.',
     objective:
