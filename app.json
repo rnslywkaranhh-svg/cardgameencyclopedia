@@ -2,14 +2,19 @@
   "expo": {
     "name": "CardGameEncyclopedia",
     "slug": "CardGameEncyclopedia",
-    "version": "1.0.0",
+    "version": "1.9.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "cardgameencyclopedia",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.cardgameencyclopedia.app",
+      "buildNumber": "19",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -33,16 +38,30 @@
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 200,
           "resizeMode": "contain",
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "#2C2416",
           "dark": {
-            "backgroundColor": "#000000"
+            "backgroundColor": "#2C2416"
           }
+        }
+      ],
+      "expo-web-browser",
+      [
+        "react-native-google-mobile-ads",
+        {
+          "androidAppId": "ca-app-pub-3940256099942544~3347511713",
+          "iosAppId": "ca-app-pub-5181902408189678~1741297008"
         }
       ]
     ],
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "25f4731f-8d49-424a-8cee-449233c49613"
+      }
     }
   }
 }

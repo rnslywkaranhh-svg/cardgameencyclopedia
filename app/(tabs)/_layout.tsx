@@ -1,35 +1,68 @@
-import { Tabs } from 'expo-router';
-import React from 'react';
-
-import { HapticTab } from '@/components/haptic-tab';
-import { IconSymbol } from '@/components/ui/icon-symbol';
-import { Colors } from '@/constants/theme';
-import { useColorScheme } from '@/hooks/use-color-scheme';
+import { Tabs } from "expo-router";
+import { Text } from "react-native";
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
         headerShown: false,
-        tabBarButton: HapticTab,
-      }}>
+        tabBarStyle: {
+          backgroundColor: "#F5F0E8",
+          borderTopColor: "#E0D8CC",
+          borderTopWidth: 1,
+        },
+        tabBarActiveTintColor: "#C4873A",
+        tabBarInactiveTintColor: "#8C7B6B",
+      }}
+    >
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          title: "Games",
+          tabBarIcon: ({ color }) => (
+            <Text style={{ fontSize: 18, color }}>♠</Text>
+          ),
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="categories"
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          title: "Categories",
+          tabBarIcon: ({ color }) => (
+            <Text style={{ fontSize: 18, color }}>♣</Text>
+          ),
         }}
       />
+      <Tabs.Screen
+        name="favourites"
+        options={{
+          title: "Favourites",
+          tabBarIcon: ({ color }) => (
+            <Text style={{ fontSize: 18, color }}>♥</Text>
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="random"
+        options={{
+          title: "Suggest",
+          tabBarIcon: ({ color }) => (
+            <Text style={{ fontSize: 18, color }}>✦</Text>
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="settings"
+        options={{
+          title: "Settings",
+          tabBarIcon: ({ color }) => (
+            <Text style={{ fontSize: 18, color }}>⚙</Text>
+          ),
+        }}
+      />
+      <Tabs.Screen name="game" options={{ href: null }} />
+      <Tabs.Screen name="category-detail" options={{ href: null }} />
+      <Tabs.Screen name="explore" options={{ href: null }} />
     </Tabs>
   );
 }
