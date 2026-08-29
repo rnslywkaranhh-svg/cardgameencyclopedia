@@ -51,12 +51,13 @@ export default function TabLayout() {
           ),
         }}
       />
+      <Tabs.Screen name="settings" options={{ href: null }} />
       <Tabs.Screen
-        name="settings"
+        name="score-keeper"
         options={{
-          title: "Settings",
+          title: "Score",
           tabBarIcon: ({ color }) => (
-            <Text style={{ fontSize: 18, color }}>⚙</Text>
+            <Text style={{ fontSize: 18, color }}>♦</Text>
           ),
         }}
       />
