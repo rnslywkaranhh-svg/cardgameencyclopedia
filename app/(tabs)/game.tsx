@@ -9,14 +9,23 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import {
-  BannerAd,
-  BannerAdSize,
-  TestIds,
-} from "react-native-google-mobile-ads";
 import { GAMES } from "../../constants/games";
 import { AD_UNIT_IDS } from "../../constants/monetization";
 import { useAdFree } from "../../constants/useAdFree";
+// AdMob import wrapped in try/catch so Expo Go dev mode doesn't crash.
+// In production/TestFlight, real AdMob loads normally.
+// In Expo Go, BannerAd becomes a no-op component that renders nothing.
+let BannerAd: any = () => null;
+let BannerAdSize: any = { BANNER: "BANNER" };
+let TestIds: any = { BANNER: "" };
+try {
+  const AdMob = require("react-native-google-mobile-ads");
+  BannerAd = AdMob.BannerAd;
+  BannerAdSize = AdMob.BannerAdSize;
+  TestIds = AdMob.TestIds;
+} catch (e) {
+  // AdMob native module not available (Expo Go) — silently no-op
+}
 
 const FAVOURITES_KEY = "favourite_games";
 const GAME_DETAILS = Object.fromEntries(GAMES.map((g) => [g.name, g]));
